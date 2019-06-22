@@ -37,4 +37,4 @@ RUN apk update && apk upgrade
 
 RUN apk add imagemagick
 
-CMD ["convert --version"]
+CMD ["convert", "-version"]
