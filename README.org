@@ -39,10 +39,14 @@ Depend Docker.
 * Usage
 Run ~docker-imagick~ like as below.
 
-# #+begin_src bash
-#   $ echo '{"version":100}' | docker container run -i --rm conao3/jq:1.6 '.version'
-#   100
-# #+end_src
+#+begin_src bash
+  $ docker run -it conao3/imagick                                                                                                                                                                      622ms  土  6/22 12:21:01 2019
+  Version: ImageMagick 7.0.8-44 Q16 x86_64 2019-05-06 https://imagemagick.org
+  Copyright: © 1999-2019 ImageMagick Studio LLC
+  License: https://imagemagick.org/script/license.php
+  Features: Cipher DPC HDRI Modules
+  Delegates (built-in): bzlib cairo fontconfig freetype gslib jng jpeg lcms ltdl pangocairo png ps rsvg tiff webp x xml zlib
+#+end_src
 
 Or, alias it.
 # #+begin_src bash
