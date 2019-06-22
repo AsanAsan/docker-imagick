@@ -20,18 +20,21 @@ MAINTAINER Naoya Yamashita (@conao3)
 RUN apk update && apk upgrade
 RUN apk add alpine-sdk
 
-WORKDIR /opt
-# RUN git clone https://github.com/nurse/nkf.git
+# WORKDIR /opt
+# RUN curl -LO https://github.com/ImageMagick/ImageMagick/archive/7.0.8-49.tar.gz
+# RUN mkdir imagic
+# RUN tar xzf 7.0.8-49.tar.gz -C imagic --strip-components 1
 
-# WORKDIR nkf
-RUN make
-RUN make install
+# WORKDIR /opt/imagic
+# RUN ./configure && make && sudo make install
 
 ##############################
-# FROM alpine:3.9
+FROM alpine:3.9
 
-# RUN apk update && apk upgrade
+RUN apk update && apk upgrade
 
 # COPY --from=0 /usr/local /usr/local
 
-# CMD ["nkf"]
+RUN apk add imagemagick
+
+CMD ["convert --version"]
